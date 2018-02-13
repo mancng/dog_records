@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/index.css">
+    <title>Dogs</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>All Dogs</h1>
+        <a id="atag" href="/dog/new">Add</a>
+        <% for (var x in allDogs) { %>
+            <div id="content">
+                <h3>Name: <a href="/dog/edit/<%= allDogs[x].id%>"><%= allDogs[x].name%></a> </h3>
+                <h5>Breed: <%= allDogs[x].breed%></h5>
+                <h5>Age: <%= allDogs[x].age%></h5>
+                <h5>Location: <%= allDogs[x].location%></h5>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

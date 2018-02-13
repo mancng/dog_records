@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/stylesheets/new.css">
+    <title>New Dog</title>
+</head>
+<body>
+    <div id="wrapper">
+        <h1>Add Dog</h1>
+        <form action="/dogs" method="POST">
+            <label for="name">Name: </label>
+            <input id="name" type="text" name="name"><br>
+            <label for="breed">Breed: </label>
+            <input type="text" id="breed" name="breed"><br>
+            <label for="age">Age: </label>
+            <input type="text" id="age" name="age"><br>
+            <label for="location">Location: </label>
+            <input type="text" id="location" name="location"><br>
+            <input type="submit" id="btn" value="Add Dog">
+            <a href="/">Cancel</a>
+        </form>
+    </div>
+</body>
+</html>

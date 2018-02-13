@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+h1{
+    color: green;
+    display: inline-block;
+}
+
+#wrapper{
+    width: 400px;
+    display: table;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid black;
+    margin-top: 30px;
+}
+
+#content{
+    margin-top: 10px;
+}
+
+#atag{
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-left: 230px;
+    vertical-align: top;
+    padding: 3px;
+    line-height: 2em;
+}
