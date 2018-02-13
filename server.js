@@ -67,8 +67,26 @@ app.get('/dog/edit/:id', function(req, res){
 
 app.post('/dogs/:id', function(req, res){
     // console.log(req.params.id);
-    console.log("POST DATA: ", req.body);
-    res.redirect('/')
+    // console.log("POST DATA: ", req.body);
+
+    Dog.update({_id: req.params.id}, {name: req.body.name, breed: req.body.breed, age: req.body.age, location: req.body.location}, function(err) {
+        if (err) {
+            console.log("Error updating: " + err);
+        } else {
+            res.redirect('/');
+        };
+    });
+});
+
+app.post('/dogs/destroy/:id', function(req, res){
+    // console.log("Delete me: "+ req.params.id);
+    Dog.remove({_id: req.params.id}, function(err){
+        if(err) {
+            console.log("Got error when deleteing: " + err);
+        } else {
+            res.redirect('/');
+        };
+    });
 });
 
 //Listen to server

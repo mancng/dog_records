@@ -11,6 +11,9 @@
     <div id="wrapper">
         <h1>Edit Dog</h1>
             <% for (var dog in theDog) { %>
+            <form id="delete" action="/dogs/destroy/<%= theDog[dog].id%>" method="POST">
+                <input id="delete_btn" type="submit" value="Delete">
+            </form>
             <form action="/dogs/<%= theDog[dog].id%>" method="POST">    
                 <label for="name">Name: </label>
                 <input id="name" type="text" name="name" value='<%= theDog[dog].name %>'><br>
@@ -21,7 +24,6 @@
                 <label for="location">Location: </label>
                 <input type="text" id="location" name="location" value='<%= theDog[dog].location %>'><br>
                 <input type="submit" id="btn" value="Edit Dog">
-                <a href="/">Delete</a>
                 <a href="/">Cancel</a>
             </form>
             <% } %>

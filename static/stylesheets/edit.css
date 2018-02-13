@@ -5,6 +5,7 @@
 
 h1{
     color: green;
+    display: inline-block;
 }
 
 #wrapper{
@@ -44,3 +45,15 @@ h1{
 a{
     margin-right: 10px;
 }
+
+#delete_btn{
+    font-size: 16pt;
+}
+
+#delete{
+    display: inline-block;
+    vertical-align: top;
+    line-height: 2em;
+    margin-left: 200px;
+}
+
